@@ -17,6 +17,12 @@ namespace Scrapple.Objects
       return _word;
     }
 
+    public char[] Score(string word)
+    {
+      char[] letterArray = word.ToCharArray();
+      return letterArray;
+    }
+
 
   }
 }
