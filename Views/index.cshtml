@@ -1,0 +1,16 @@
+<h1>Welcome to Scrapple</h1>
+<h3>Type a word below to start playing</h3>
+<form action="/" method="post">
+  <input name="word" id="word" placeholder="Type a word">
+  <button type="submit" name="button">submit</button>
+</form>
+@if(@Model == null)
+{
+  <p>Your score: 0 </p>
+}
+else{
+
+  <h1>Here is your score</h1>
+
+  <h3>Your Score: @Model.Score(@Model.GetWord())</h3>
+}
