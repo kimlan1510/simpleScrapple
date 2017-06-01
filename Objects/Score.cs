@@ -6,7 +6,7 @@ namespace Scrapple.Objects
   public class ScrappleWord
   {
     private string _word;
-
+    private int _points;
     public ScrappleWord(string word)
     {
       _word = word;
@@ -17,10 +17,17 @@ namespace Scrapple.Objects
       return _word;
     }
 
-    public char[] Score(string word)
+    public int Score(string word)
     {
       char[] letterArray = word.ToCharArray();
-      return letterArray;
+      foreach(char letter in letterArray)
+      {
+        if(letter == 'A' || letter == 'E'  || letter == 'I'|| letter == 'O' || letter == 'U'  || letter == 'L' || letter == 'N' || letter == 'R'  || letter == 'S' || letter == 'T' )
+        {
+          _points += 1 ;
+        }
+      }
+      return _points;
     }
 
 
